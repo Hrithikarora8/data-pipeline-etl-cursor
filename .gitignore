@@ -1,9 +1,6 @@
 # Python
 __pycache__/
-*.py[cod]
-*$py.class
 *.so
-.Python
 env/
 venv/
 ENV/
@@ -36,9 +33,6 @@ env/
 *~
 .cursor/
 
-# Data files (optional - remove if you want to commit sample data)
-data/raw/*.csv
-data/processed/*.csv
 
 # Warehouse database
 warehouse/*.duckdb
