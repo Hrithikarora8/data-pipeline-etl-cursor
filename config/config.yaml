@@ -1,0 +1,29 @@
+# Data Pipeline Configuration
+
+# Paths
+paths:
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  warehouse: "warehouse/sales_dw.duckdb"
+
+# Data files
+files:
+  sales: "sales_data.csv"
+  customers: "customer_data.csv"
+
+# Data quality rules
+quality_rules:
+  min_price: 0
+  max_price: 10000
+  required_fields:
+    - order_id
+    - date
+    - product
+    - quantity
+    - unit_price
+
+# Warehouse schema
+warehouse:
+  fact_table: "fact_sales"
+  dim_customer_table: "dim_customers"
+  dim_product_table: "dim_products"
