@@ -1,9 +1,60 @@
-# Python
+# Python bytecode
 __pycache__/
+*.py[cod]
+*$py.class
 *.so
-env/
+.Python
+
+# Virtual Environment
 venv/
+env/
 ENV/
+.venv/
+
+# IDE - Cursor, VS Code, PyCharm
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.cursor/
+
+# Data files - Exclude actual data, keep structure
+data/raw/*.csv
+data/processed/*.csv
+# Keep the directories with placeholder files
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Warehouse database files
+warehouse/*.duckdb
+warehouse/*.db
+warehouse/*.duckdb.wal
+!warehouse/.gitkeep
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# OS specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+
+# Jupyter Notebooks (if you add them later)
+.ipynb_checkpoints/
+*.ipynb
+
+# Distribution / packaging
 build/
 develop-eggs/
 dist/
@@ -19,36 +70,14 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
-# Virtual Environment
-venv/
-ENV/
-env/
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.cursor/
-
-
-# Warehouse database
-warehouse/*.duckdb
-warehouse/*.db
-
-# Logs
-*.log
-logs/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Environment variables
-.env
-
-# Jupyter Notebooks
-.ipynb_checkpoints/
-*.ipynb
+# Sample data generator output (optional - uncomment if you don't want to commit)
+# sales_data.csv
+# customer_data.csv
